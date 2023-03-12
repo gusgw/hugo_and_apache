@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# Work from root
 cd || exit
 
 date >> daily.log
