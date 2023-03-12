@@ -1,0 +1,13 @@
+# .htaccess setting up forbidden files and password access
+
+<FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp|kra)|~)$">
+    Require all denied
+</FilesMatch>
+
+Options All -Indexes
+
+AuthType Basic
+AuthName "Request access at https://contact.gusgw.net/"
+AuthUserFile /usr/local/apache2/.htpasswd
+AuthMerging And
+Require valid-user

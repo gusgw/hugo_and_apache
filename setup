@@ -1,0 +1,13 @@
+#! /bin/bash
+
+# Work from /root
+cd || exit
+
+# Render and publish
+git clone "${REPO}" www
+cd www || exit
+git checkout "${BRANCH}"
+git submodule init
+git submodule update
+hugo
+rsync -av public/ "${HTDOCS}"/

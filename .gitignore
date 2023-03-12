@@ -1,0 +1,3 @@
+# Ignore the files that should not be shared
+id_rsa
+htpasswd
